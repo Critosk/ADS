@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    float num, max;
+
+    printf("Enter how many numbers: ");
+    scanf("%d", &n);
+
+    printf("Enter number 1: ");
+    scanf("%f", &max);   // assume first number is max
+
+    for (i = 2; i <= n; i++) {
+        printf("Enter number %d: ", i);
+        scanf("%f", &num);
+
+        if (num > max) {
+            max = num;
+        }
+    }
+
+    printf("The greatest number is: %.2f\n", max);
+
+    return 0;
+}
